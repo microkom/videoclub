@@ -47,11 +47,11 @@ public class Serie extends Entregable {
     public String toString() {
         String texto = "";
         texto = "\tTítulo: " + super.getTitulo() + "\n"
-                + "\tNumero de temporadas: " + this.numTemporadas;
+                + "\tNº temporadas: " + this.numTemporadas+ "\n";
         if (super.isEntregado()) {
-            texto += "\tSerie entreagada\n";
+            texto += "\tSerie no disponible\n";
         } else {
-            texto += "\tSeire no disponible\n";
+            texto += "\tSerie disponible\n";
         }
         texto += "\tGenero: " + super.getGenero() + "\n"
                 + "\tCreador: " + this.creador;

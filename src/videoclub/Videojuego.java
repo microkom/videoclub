@@ -36,11 +36,11 @@ public class Videojuego extends Entregable {
     public String toString(){
         String texto="";
         texto = "\tTítulo: " + super.getTitulo() + "\n"
-                + "\tHoras: " + this.horas;
+                + "\tHoras: " + this.horas+ "\n";
         if (super.isEntregado()) {
-            texto += "\tVideojuego entreagada\n";
-        } else {
             texto += "\tVideojuego no disponible\n";
+        } else {
+            texto += "\tVideojuego disponible\n";
         }
         texto += "\tGenero: " + super.getGenero() + "\n"
                 + "\tCompañia: " + this.company;

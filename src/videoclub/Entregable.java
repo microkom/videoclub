@@ -44,8 +44,17 @@ public class Entregable {
     public void setEntregado(boolean entregado) {
         this.entregado = entregado;
     }
-
     public void setGenero(String genero) {
         this.genero = genero;
     }
+    
+    //metodo entregar() (prestar) items
+    public void entregar(){
+        this.entregado=true;
+    }
+    //metodo para devolver items
+    public void devolver(){
+        this.entregado=false;
+    }
+   
 }
