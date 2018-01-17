@@ -34,16 +34,9 @@ public class Videojuego extends Entregable {
     }
     
     public String toString(){
-        String texto="";
-        texto = "\tTítulo: " + super.getTitulo() + "\n"
-                + "\tHoras: " + this.horas+ "\n";
-        if (super.isEntregado()) {
-            texto += "\tVideojuego no disponible\n";
-        } else {
-            texto += "\tVideojuego disponible\n";
-        }
-        texto += "\tGenero: " + super.getGenero() + "\n"
-                + "\tCompañia: " + this.company;
+        String texto = super.toString();
+        texto += "\tHoras: " + this.horas+ "\n";
+        texto += "\tCompañia: " + this.company;
         return texto;
     }
 }

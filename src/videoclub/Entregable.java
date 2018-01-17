@@ -56,5 +56,16 @@ public class Entregable {
     public void devolver(){
         this.entregado=false;
     }
+    public String toString(){
+        String texto = "";
+        texto = "\tTítulo: " + this.titulo+ "\n";
+        if (this.entregado) {
+            texto += "\tSerie no disponible\n";
+        } else {
+            texto += "\tSerie disponible\n";
+        }
+        texto += "\tGenero: " + this.genero+ "\n";
+        return texto;
+    }
    
 }

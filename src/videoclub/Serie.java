@@ -5,7 +5,7 @@ public class Serie extends Entregable {
     //CONSTANTES temporadas 3 , entregado false y el genero acción.
     final static int TEMPORADAS_DEF = 3;
     final static boolean ENTREGADO_DEF = false;
-    final static String GENERO_DEF = "Acción";
+    
 
     //Sus atributos son titulo, numero de temporadas, entregado, genero y creador
     private int numTemporadas;
@@ -45,16 +45,9 @@ public class Serie extends Entregable {
 
     //Método toString
     public String toString() {
-        String texto = "";
-        texto = "\tTítulo: " + super.getTitulo() + "\n"
-                + "\tNº temporadas: " + this.numTemporadas+ "\n";
-        if (super.isEntregado()) {
-            texto += "\tSerie no disponible\n";
-        } else {
-            texto += "\tSerie disponible\n";
-        }
-        texto += "\tGenero: " + super.getGenero() + "\n"
-                + "\tCreador: " + this.creador;
+        String texto = super.toString();
+        texto += "\tNº temporadas: " + this.numTemporadas+ "\n";
+        texto += "\tCreador: " + this.creador;
         return texto;
     }
 }
