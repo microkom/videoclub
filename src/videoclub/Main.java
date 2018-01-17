@@ -76,15 +76,32 @@ public class Main {
         
         //Video juego que tiene más horas
         int mayor=0;
+        String videoj="";
         for (i = 0; i < item.length; i++) {
             if (item[i] != null) {
                 if (item[i] instanceof Videojuego) {
-                    if (item[i].getHoras > mayor) {
-                        mayor=item[i].getHoras;
+                    if (((Videojuego)item[i]).getHoras() > mayor) {
+                        mayor=((Videojuego)item[i]).getHoras();
+                        videoj=((Videojuego)item[i]).getTitulo();
                     }
                 }
             }
         }
+        System.out.println("El video juego que más horas tiene es "+videoj+" con "+mayor+" horas\n");
+        
+        mayor=0;
+        String series="";
+        for (i = 0; i < item.length; i++) {
+            if (item[i] != null) {
+                if (item[i] instanceof Serie) {
+                    if (((Serie)item[i]).getNumTemporadas()> mayor) {
+                        mayor=((Serie)item[i]).getNumTemporadas();
+                        series=((Serie)item[i]).getTitulo();
+                    }
+                }
+            }
+        }
+        System.out.println("La serie que más temporadas tiene es "+series+" con "+mayor+" temporadas\n");
         
         
         //Series mostradas por pantalla
